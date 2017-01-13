@@ -10,6 +10,7 @@ public class CarController : MonoBehaviour {
     [SerializeField] private float m_brakeTorque = 30.0f;
     [SerializeField] private float m_maxSteerAngle = 45.0f;
     [SerializeField] private float m_topSpeed = 200.0f;
+    [SerializeField] private float m_downForce = 100.0f;
 
     [SerializeField] private GameObject[] m_wheels = new GameObject[4];
 
@@ -45,7 +46,6 @@ public class CarController : MonoBehaviour {
     void FixedUpdate() {
         Move_Car();
         Steer_Wheels();
-        CapSpeed();
     }
 
     void Move_Car() {
@@ -64,6 +64,9 @@ public class CarController : MonoBehaviour {
 
         m_colliders[0].steerAngle = m_maxSteerAngle * Input.GetAxis("Horizontal");
         m_colliders[1].steerAngle = m_maxSteerAngle * Input.GetAxis("Horizontal");
+
+        CapSpeed();
+        AddDownForce();
     }
 
     void Steer_Wheels() {
@@ -84,5 +87,10 @@ public class CarController : MonoBehaviour {
         }
 
         m_speedMeter.text = m_rb.velocity.magnitude * 3.6f + "KM/H";
+    }
+
+    private void AddDownForce() {
+        m_colliders[0].attachedRigidbody.AddForce(-transform.up * m_downForce * m_colliders[0].attachedRigidbody
+            .velocity.magnitude);
     }
 }
