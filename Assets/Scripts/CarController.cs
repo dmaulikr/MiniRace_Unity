@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class CarController : MonoBehaviour {
 
+    [SerializeField] private Text m_speedMeter;
+
     [SerializeField] private float m_maxTorque = 30.0f;
     [SerializeField] private float m_brakeTorque = 30.0f;
-    [SerializeField] private float m_maxSteerAngle = 30.0f;
+    [SerializeField] private float m_maxSteerAngle = 45.0f;
     [SerializeField] private float m_topSpeed = 200.0f;
 
     [SerializeField] private GameObject[] m_wheels = new GameObject[4];
@@ -42,6 +45,7 @@ public class CarController : MonoBehaviour {
     void FixedUpdate() {
         Move_Car();
         Steer_Wheels();
+        CapSpeed();
     }
 
     void Move_Car() {
@@ -78,5 +82,7 @@ public class CarController : MonoBehaviour {
         if (speed > m_topSpeed) {
             m_rb.velocity = (m_topSpeed / 3.6f) * m_rb.velocity.normalized;
         }
+
+        m_speedMeter.text = m_rb.velocity.magnitude * 3.6f + "KM/H";
     }
 }

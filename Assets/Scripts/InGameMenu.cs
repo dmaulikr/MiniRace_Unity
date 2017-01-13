@@ -46,6 +46,7 @@ public class InGameMenu : MonoBehaviour {
             m_stopwatch.enabled = false;
 
             GetComponent<CarController>().enabled = false;
+            GetComponent<WheelCollider>().brakeTorque = 10000;
 
             if (Input.GetKeyDown(KeyCode.Joystick1Button0)) {
                 SceneManager.LoadScene(0);
