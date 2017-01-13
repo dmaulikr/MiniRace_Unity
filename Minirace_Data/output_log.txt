@@ -18,20 +18,32 @@ Platform assembly: E:\MiniRace\Minirace_Data\Managed\UnityEngine.Networking.dll 
 Loading E:\MiniRace\Minirace_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: E:\MiniRace\Minirace_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading E:\MiniRace\Minirace_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.214 seconds
+- Completed reload, in  0.127 seconds
 Platform assembly: E:\MiniRace\Minirace_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: E:\MiniRace\Minirace_Data\Managed\System.dll (this message is harmless)
 desktop: 2560x1440 144Hz; virtual: 2560x1440 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.573275 ms
+UnloadTime: 0.689853 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2118 -> priority: 1 
-  Thread -> id: 2188 -> priority: 1 
+  Thread -> id: 2ed0 -> priority: 1 
+  Thread -> id: 2ed4 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 6.678600 ms
+UnloadTime: 3.551424 ms
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 966.
-Total: 0.517991 ms (FindLiveObjects: 0.051678 ms CreateObjectMapping: 0.021332 ms MarkObjects: 0.244273 ms  DeleteObjects: 0.200105 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 969.
+Total: 0.422745 ms (FindLiveObjects: 0.043266 ms CreateObjectMapping: 0.021032 ms MarkObjects: 0.169158 ms  DeleteObjects: 0.188688 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 16.886692 ms
+
+Unloading 254 unused Assets to reduce memory usage. Loaded Objects now: 253.
+Total: 1.335239 ms (FindLiveObjects: 0.016525 ms CreateObjectMapping: 0.026440 ms MarkObjects: 0.114174 ms  DeleteObjects: 1.177798 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.352438 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 971.
+Total: 0.563660 ms (FindLiveObjects: 0.057387 ms CreateObjectMapping: 0.021633 ms MarkObjects: 0.270112 ms  DeleteObjects: 0.214227 ms)
 
