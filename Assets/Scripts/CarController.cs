@@ -36,6 +36,8 @@ public class CarController : MonoBehaviour {
         for (int i = 0; i < 4; i++) {
             m_wheelLocalRotations[i] = m_wheels[i].transform.localRotation;
         }
+
+        Time.timeScale = 1;
 	}
 
 	// Update is called once per frame
