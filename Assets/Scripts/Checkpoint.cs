@@ -3,11 +3,8 @@ using System.Collections;
 
 public class Checkpoint : MonoBehaviour {
 
-    static Transform playerTransform;
-
 	// Use this for initialization
 	void Start () {
-         playerTransform = GameObject.FindWithTag("Player").transform;
 	}
 
 	// Update is called once per frame
@@ -17,7 +14,6 @@ public class Checkpoint : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
             if (transform == CheckpointController.checkpointA[CheckpointController.currentCheckpoint].transform) {
-                Debug.Log("get in");
                 if (CheckpointController.currentCheckpoint + 1 < CheckpointController.checkpointA.Length) {
                     if (CheckpointController.currentCheckpoint == 0) {
                         CheckpointController.currentLap++;
