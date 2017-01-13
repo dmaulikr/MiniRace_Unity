@@ -20,6 +20,7 @@ public class CarController : MonoBehaviour {
     private Rigidbody m_rb;
     private Vector3 m_centreOfMass;
     private Vector3 m_wheel_angle;
+    private float pitch = 0.0f;
 
     // Use this for initialization
     void Start() {
@@ -48,6 +49,7 @@ public class CarController : MonoBehaviour {
     void FixedUpdate() {
         Move_Car();
         Steer_Wheels();
+        Audio();
     }
 
     void Move_Car() {
@@ -94,5 +96,10 @@ public class CarController : MonoBehaviour {
     private void AddDownForce() {
         m_colliders[0].attachedRigidbody.AddForce(-transform.up * m_downForce * m_colliders[0].attachedRigidbody
             .velocity.magnitude);
+    }
+
+    private void Audio() {
+        pitch = 0.8f + (m_rb.velocity.magnitude * 3.6f) / m_topSpeed;
+        GetComponent<AudioSource>().pitch = pitch;
     }
 }
