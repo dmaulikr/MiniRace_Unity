@@ -1,6 +1,6 @@
 ## Race & Build
 
-This is a racing game builds with Unity 5. Aims to provide a casual racing experiences and a easy to use track builder with VR support.
+This is a racing game builds with Unity 5. Aims to provide a casual racing experiences.
 
 ---
 
